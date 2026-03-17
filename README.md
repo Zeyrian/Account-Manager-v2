@@ -1,6 +1,6 @@
 # 🔐 Account Manager v2
 
-An upgraded version of [Simple Account Manager](https://github.com/Zeyrian/Python-Account-Manager) — adding bcrypt password hashing, persistent JSON storage, and a password strength enforcement system.
+An upgraded version of [Simple Account Manager](https://github.com/Zeyrian/Python-Account-Manager), adding bcrypt password hashing, persistent JSON storage, and a password strength enforcement system.
 
 ---
 
@@ -8,23 +8,23 @@ An upgraded version of [Simple Account Manager](https://github.com/Zeyrian/Pytho
 
 - User creation and login with bcrypt-hashed passwords
 - Accounts persist across sessions via JSON storage
-- Password strength checker — enforces length, character variety, and screens against a common password list
+- Password strength checker that enforces length, character variety, and screens against a common password list
 - Account lockout after 5 consecutive failed login attempts
 - Class-based structure: `Account` and `Account_Manager` classes
 
 ## ⚙️ Technologies
 
 - Python 3
-- [`bcrypt`](https://pypi.org/project/bcrypt/) — password hashing
-- `json` (standard library) — persistent credential storage
-- OOP — modular class design
+- [`bcrypt`](https://pypi.org/project/bcrypt/) for password hashing
+- `json` (standard library) for persistent credential storage
+- OOP with modular class design
 
 ---
 
 ## 💾 How the Security Works
 
 ### bcrypt Hashing
-Passwords are run through `bcrypt.hashpw()` with a unique salt before anything is written to disk. On login, `bcrypt.checkpw()` handles comparison — the original password is never reconstructed or stored.
+Passwords are run through `bcrypt.hashpw()` with a unique salt before anything is written to disk. On login, `bcrypt.checkpw()` handles the comparison, so the original password is never reconstructed or stored.
 
 ### 💎 Password Strength Scoring
 Passwords are scored out of 100 at registration. Points are deducted based on:
@@ -38,7 +38,7 @@ Passwords are scored out of 100 at registration. Points are deducted based on:
 Passwords scoring **50 or below** are rejected. Minimum length is **12 characters**.
 
 ### ⛔ Account Lockout
-Failed attempts are tracked on the `Account` object. After **5 failed attempts**, the session locks — no further attempts are accepted.
+Failed attempts are tracked on the `Account` object. After **5 failed attempts**, the session locks and no further attempts are accepted.
 
 ---
 
