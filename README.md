@@ -1,6 +1,6 @@
 # 🔐 Account Manager v2
 
-An upgraded version of [Simple Account Manager](#) — adding bcrypt password hashing, persistent JSON storage, and a password strength enforcement system.
+An upgraded version of [Simple Account Manager](https://github.com/Zeyrian/Python-Account-Manager) — adding bcrypt password hashing, persistent JSON storage, and a password strength enforcement system.
 
 ---
 
